@@ -5,16 +5,20 @@ import { useEffect, useState } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Homescreen from './pages/homescreen';
 import Contentscreen from './pages/contentscreen';
+import { NavigationContainer } from '@react-navigation/native';
+
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Homescreen} />
-      <Stack.Screen name="Content" component={Contentscreen} />
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Homescreen} />
+        <Stack.Screen name="Content" component={Contentscreen} />
 
-    </Stack.Navigator>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 
 }

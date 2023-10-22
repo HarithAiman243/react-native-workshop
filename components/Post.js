@@ -28,9 +28,9 @@ const Post = (props) => {
         <View style={[styles.topHeader]}>
           {/* CTRL - Click    to jump */}
 
-          <Text style={[styles.headerText, styles.boldFont]}> {props.name}</Text>
-          <Text style={[styles.headerText, styles.grayFont]}> {props.username}</Text>
-          <Text style={[styles.headerText, styles.grayFont]}> {props.createdAt}</Text>
+          <Text style={[styles.headerText, styles.boldFont]}> {props.name ?? 'user'}</Text>
+          <Text style={[styles.headerText, styles.grayFont]}> {props.username ?? 'username'}</Text>
+          <Text style={[styles.headerText, styles.grayFont]}> {props.createdAt ?? '1 day'}</Text>
 
           {/* <Text style={[styles.headerText, styles.boldFont]}>Harith Aiman</Text> */}
           {/* <Text style={[styles.headerText, styles.grayFont]}>@harithaiman243</Text> */}
